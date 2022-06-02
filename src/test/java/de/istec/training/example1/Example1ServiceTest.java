@@ -1,8 +1,8 @@
 package de.istec.training.example1;
 
 import de.istec.training.example1.source.Reference;
-import de.istec.training.example1.target.GroupValuesRow;
-import de.istec.training.example1.target.ValueCell;
+import de.istec.training.example1.dto.GroupValuesRow;
+import de.istec.training.example1.dto.ValueCell;
 import de.istec.training.example1.util.Period;
 import org.junit.jupiter.api.Test;
 

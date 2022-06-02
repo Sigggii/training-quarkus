@@ -1,6 +1,6 @@
 package de.istec.training.example1;
 
-import de.istec.training.example1.target.GroupValuesRow;
+import de.istec.training.example1.dto.GroupValuesRow;
 import de.istec.training.example1.util.Period;
 
 import java.util.Collection;

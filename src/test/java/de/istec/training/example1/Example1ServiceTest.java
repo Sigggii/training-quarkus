@@ -65,18 +65,18 @@ class Example1ServiceTest {
         ValueCell.empty() // 12
       )),
       new GroupValuesRow("Group-2", TYPE_CHARACTER, List.of(
-        ValueCell.of(10, "Osterhase", true, false), // 1
-        ValueCell.of(10, "Osterhase", true, false), // 2
-        ValueCell.of(10, "Weihnachtsmann", true, true), // 3
-        ValueCell.of(10, "Weihnachtsmann", true, false), // 4
-        ValueCell.of(10, "Weihnachtsmann", true, false), // 5
-        ValueCell.of(10, "Nikolausi", false, true), // 6
-        ValueCell.of(10, "Nikolausi", false, false), // 7
-        ValueCell.of(10, "Nikolausi", false, false), // 8
-        ValueCell.of(10, "Nikolausi", false, false), // 9
-        ValueCell.of(10, "Nikolausi", false, false), // 10
-        ValueCell.of(10, "Nikolausi", false, false), // 11
-        ValueCell.of(10, "Nikolausi", false, false) // 12
+        ValueCell.of(40, "Osterhase", true, false), // 1
+        ValueCell.of(40, "Osterhase", true, false), // 2
+        ValueCell.of(41, "Weihnachtsmann", true, true), // 3
+        ValueCell.of(41, "Weihnachtsmann", true, false), // 4
+        ValueCell.of(41, "Weihnachtsmann", true, false), // 5
+        ValueCell.of(21, "Nikolausi", false, true), // 6
+        ValueCell.of(22, "Nikolausi", false, false), // 7
+        ValueCell.of(22, "Nikolausi", false, false), // 8
+        ValueCell.of(22, "Nikolausi", false, false), // 9
+        ValueCell.of(22, "Nikolausi", false, false), // 10
+        ValueCell.of(22, "Nikolausi", false, false), // 11
+        ValueCell.of(22, "Nikolausi", false, false) // 12
       )),
       // Group-4
       new GroupValuesRow("Group-4", TYPE_REFERENCE, List.of(
@@ -94,18 +94,18 @@ class Example1ServiceTest {
         ValueCell.empty() // 12
       )),
       new GroupValuesRow("Group-4", TYPE_CHARACTER, List.of(
-        ValueCell.of(10, "Osterhase", false, false), // 1
-        ValueCell.of(10, "Osterhase", false, false), // 2
-        ValueCell.of(10, "Weihnachtsmann", false, true), // 3
-        ValueCell.of(10, "Weihnachtsmann", false, false), // 4
-        ValueCell.of(10, "Weihnachtsmann", false, false), // 5
-        ValueCell.of(10, "Weihnachtsmann", false, false), // 6
-        ValueCell.of(10, "Weihnachtsmann", false, false), // 7
-        ValueCell.of(10, "Weihnachtsmann", false, false), // 8
-        ValueCell.of(10, "Weihnachtsmann", false, false), // 9
-        ValueCell.of(10, "Weihnachtsmann", false, false), // 10
-        ValueCell.of(10, "Weihnachtsmann", false, false), // 11
-        ValueCell.of(10, "Weihnachtsmann", false, false) // 12
+        ValueCell.of(40, "Osterhase", false, false), // 1
+        ValueCell.of(40, "Osterhase", false, false), // 2
+        ValueCell.of(41, "Weihnachtsmann", false, true), // 3
+        ValueCell.of(41, "Weihnachtsmann", false, false), // 4
+        ValueCell.of(41, "Weihnachtsmann", false, false), // 5
+        ValueCell.of(41, "Weihnachtsmann", false, false), // 6
+        ValueCell.of(41, "Weihnachtsmann", false, false), // 7
+        ValueCell.of(41, "Weihnachtsmann", false, false), // 8
+        ValueCell.of(41, "Weihnachtsmann", false, false), // 9
+        ValueCell.of(41, "Weihnachtsmann", false, false), // 10
+        ValueCell.of(41, "Weihnachtsmann", false, false), // 11
+        ValueCell.of(41, "Weihnachtsmann", false, false) // 12
       ))
     );
   }

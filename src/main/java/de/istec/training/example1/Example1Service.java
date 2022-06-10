@@ -21,6 +21,13 @@ public class Example1Service {
         than unreferenced values.
 
         TODO implement the logic without implicit loops
+
+        Hints:
+        * you can create as many classes, interfaces, methods as you want
+        * you can mutate all classes, interfaces, records, ... but ExampleData
+        * assume that a real world example has more than 2 value-types
+        * try to be declarative not imperative
+
      */
     return Collections.emptyList();
   }

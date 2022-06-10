@@ -38,6 +38,9 @@ public class ExampleData {
     );
   }
 
+  public static Stream<ValueGroup> groups() {
+    return valueGroups.values().stream();
+  }
 
   public static Stream<Pair<ValueGroup, TimeValue>> data() {
     return timeValues()

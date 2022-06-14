@@ -11,6 +11,10 @@ public record Month(int year, int month) implements Comparable<Month> {
     return new Month(month == 12 ? year + 1 : year, month == 12 ? 1 : month + 1);
   }
 
+  public Month last() {
+    return new Month(month == 1 ? year -1 : year, month == 1 ? 12: month -1);
+  }
+
   public boolean isAfter(Month m) {
     return compareTo(m) > 0;
   }

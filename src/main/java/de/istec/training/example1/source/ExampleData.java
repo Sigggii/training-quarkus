@@ -5,6 +5,7 @@ import org.javatuples.Pair;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toMap;
@@ -48,5 +49,9 @@ public class ExampleData {
       .map(
       v -> Pair.with(valueGroups.get(v.groupId()), v)
     );
+  }
+  public static Map<ValueGroup, List<TimeValue>> getTimeValuesForGroups() {
+    return data()
+            .collect(Collectors.groupingBy(Pair::getValue0, Collectors.mapping(Pair::getValue1, Collectors.toList())));
   }
 }

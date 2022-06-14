@@ -8,7 +8,7 @@ public record GroupValuesRow(String groupName, String type,
   @Override
   public int compareTo(GroupValuesRow o) {
     var result = Comparator.comparing(GroupValuesRow::groupName).compare(this, o);
-    if (result == 0) result = Comparator.comparing(GroupValuesRow::type).compare(this, o);
+    if (result == 0) result = Comparator.comparing(GroupValuesRow::type).reversed().compare(this, o);
     return result;
   }
 }

@@ -1,10 +1,20 @@
 package de.istec.training.example1;
 
 import de.istec.training.example1.dto.GroupValuesRow;
+import de.istec.training.example1.dto.ValueCell;
+import de.istec.training.example1.source.ExampleData;
+import de.istec.training.example1.source.ValueGroup;
 import de.istec.training.example1.util.Period;
+import org.javatuples.Pair;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import static de.istec.training.example1.source.ExampleData.TYPE_REFERENCE;
+import static de.istec.training.example1.source.ExampleData.TYPE_CHARACTER;
+
 
 public class Example1Service {
 
@@ -29,6 +39,26 @@ public class Example1Service {
         * try to be declarative not imperative
 
      */
-    return Collections.emptyList();
+
+    var data = ExampleData.getTimeValuesForGroups();
+    CellFactory cellFactory = new CellFactory(data, period);
+    return data.keySet().stream()
+            .map(group-> createRowsForGroup(group, period, cellFactory))
+            .flatMap(rows -> Stream.of(rows.getValue0(), rows.getValue1()))
+            .sorted()
+            .toList();
+  }
+
+  private Pair<GroupValuesRow, GroupValuesRow> createRowsForGroup(ValueGroup valueGroup, Period period, CellFactory cellFactory){
+    var cells = period.stream()
+            .map(month ->
+             cellFactory.getValueCells(valueGroup, month)
+            )
+            .flatMap(c -> Stream.of(c.getValue0(), c.getValue1()))
+            .collect(Collectors.groupingBy(TypedCell::getType));
+
+    var charRow = new GroupValuesRow(valueGroup.name(), TYPE_CHARACTER, cells.get(TYPE_CHARACTER).stream().map(TypedCell::getValueCell).toList());
+    var refRow = new GroupValuesRow(valueGroup.name(), TYPE_REFERENCE, cells.get(TYPE_REFERENCE).stream().map(TypedCell::getValueCell).toList());
+    return Pair.with(charRow, refRow);
   }
 }
